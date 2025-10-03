@@ -43,19 +43,19 @@ const Navbar: React.FC = () => {
   }, []);
   
   return (
-    <nav className="bg-white shadow-md fixed w-full top-0 z-10">
+  <nav className="bg-gray-900 shadow-md fixed w-full top-0 z-10">
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-gray-800 cursor-pointer">
+  <Link href="/" className="text-2xl font-bold text-white cursor-pointer">
           Amana Bookstore
         </Link>
         <div className="flex items-center space-x-4">
-          <Link href="/" className={`text-gray-600 hover:text-blue-500 cursor-pointer ${pathname === '/' ? 'text-blue-500 font-semibold' : ''}`}>
+          <Link href="/" className={`text-gray-200 hover:text-green-400 cursor-pointer ${pathname === '/' ? 'text-green-400 font-semibold' : ''}`}>
             Home
           </Link>
-          <Link href="/cart" className={`text-gray-600 hover:text-blue-500 flex items-center cursor-pointer ${pathname === '/cart' ? 'text-blue-500 font-semibold' : ''}`}>
+          <Link href="/cart" className={`text-gray-200 hover:text-green-400 flex items-center cursor-pointer ${pathname === '/cart' ? 'text-green-400 font-semibold' : ''}`}>
             My Cart
             {cartItemCount > 0 && (
-              <span className="ml-2 bg-blue-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="ml-2 bg-green-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {cartItemCount}
               </span>
             )}
